@@ -510,7 +510,9 @@ T Vector4< T >::normalize()
 { 
     const T l = length(); 
     if ( l == 0 ) 
+    {
         return 0; 
+    }
 
 	const T ll = 1.0 / l;
     x *= ll; 

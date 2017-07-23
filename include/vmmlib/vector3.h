@@ -517,7 +517,9 @@ T  Vector3< T >::normalize()
 { 
     const T l = length();
     if ( l == 0 ) 
+    {
         return 0; 
+    }
 
 	const T ll = 1.0 / l;
     x *= ll; 
@@ -535,7 +537,9 @@ T  Vector3< T >::normalize( float* source )
     Vector3< float >* a = ( Vector3< float >* ) source;
     const T l = a->length();
     if ( l == 0 ) 
+    {
         return 0;
+    }
     
 	const T ll = 1.0 / l;
     source[0] *= ll;
